@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salma Ali | Pharmacist</title>
+  <link rel="stylesheet" href="Untitled-3.css">
+</head>
+<body>
+  <script>
+    /* منع الوميض: فحص الثيم وتطبيقه فوراً قبل رندر عناصر الصفحة */
+    if (localStorage.getItem("theme") === "light") {
+      document.body.classList.add("light-mode");
+    }
+  </script>
+
+<header class="header">
+  <div class="logo">
+    <img src="SALMA LOGO.jpg" alt="Salma Ali Logo">
+    <h1>Dr. Salma Ali</h1>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <span class="dropbtn">Contact Us ▼</span>
+      <div class="dropdown-content">
+        <a href="https://wa.me/201144172069" target="_blank">
+          <img src="pngimg.com - whatsapp_PNG6.png" alt="WhatsApp" width="20"> WhatsApp
+        </a>
+        <a href="mailto:salmaali2589@gmail.com">
+          <img src="mail.png" alt="Email" width="20"> Email
+        </a>
+        <a href="tel:+201144172069">
+          <img src="phone-98.png" alt="Phone" width="20"> Call
+        </a>
+      </div>
+    </div>
+  </nav>
+  <button id="mode-toggle" class="mode-btn">🌙</button>
+</header>
+
+<section class="hero">
+  <img src="Gemini_Generated_Image_vvrl2zvvrl2zvvrl.png" alt="Cover Image" class="cover-img">
+  <div class="hero-text">
+    <h2>Discover the world of <span>professional skincare</span></h2>
+    <p>Understanding the science behind your products, made simple</p>
+  </div>
+</section>
+
+<section class="about">
+  <h2>About Us</h2>
+  <p>
+    <strong>Salma Ali</strong> is a channel that provides skincare content, whether medical comparisons or useful information for healthy skin enthusiasts.
+  </p>
+</section>
+
+<section class="projects">
+  <h2>Our Work & Projects</h2>
+  <div class="gallery">
+    <div class="project-item">
+      <img src="DR DAWOOD.jpeg" alt="Dr.Dawood collaboration">
+      <h3>Dr.Dawood collaboration</h3>
+      <a href="https://www.instagram.com/p/DUBcF9YjEO_/?igsh=MWI0aGhhOXRoeWRmdQ==" target="_blank">Watch Video</a>
+    </div>
+    <div class="project-item">
+      <img src="BEMART.jpeg" alt="BEMART collaboration">
+      <h3>BEMART collaboration</h3>
+      <a href="https://www.instagram.com/p/DYaBClYDEU-/?igsh=OXFtN3lraHIxMm8=" target="_blank">Watch Video</a>
+    </div>
+    <div class="project-item">
+      <img src="KIARA.jpeg" alt="Kiara collaboration">
+      <h3>Kiara collaboration</h3>
+      <a href="https://www.instagram.com/reel/DZScBJTN4BW/?igsh=dGdmZ2t1anh3Z282" target="_blank">Watch Video</a>
+    </div>
+    <div class="project-item">
+      <img src="VIVA.jpeg" alt="VIVA collaboration">
+      <h3>VIVA collaboration</h3>
+      <a href="https://www.instagram.com/reel/DX98ukSNNza/?igsh=MWxpZ3Nwd3Q2bGhxYw==" target="_blank">Watch Video</a>
+    </div>
+    <div class="project-item">
+      <img src="U RICHI.jpeg" alt="U RICHI collaboration">
+      <h3>U RICHI collaboration</h3>
+      <a href="https://www.instagram.com/reel/DUQlj9UDEfT/?igsh=cHV3ZTd6OXZtMjY4" target="_blank">Watch Video</a>
+    </div>
+    <div class="project-item">
+      <img src="bold.jpeg" alt="bold pro collaboration">
+      <h3>bold pro collaboration</h3>
+      <a href="https://www.instagram.com/reel/DXMtfpvDMAd/?igsh=bzRna2R5cmZteDdz" target="_blank">Watch Video</a>
+    </div>
+  </div>
+</section>
+
+<section class="sponsors">
+  <h2>Our collaborations</h2>
+  <div class="sponsor-logos">
+    <img src="u-pnggg.png" alt="U RICHI">
+    <img src="logo_new_150x.png" alt="BEMART">
+    <img src="LogoBlack_faccfe94-ff51-4324-b68b-90068338242d.png" alt="BOLD PRO">
+    <img src="ERUKEA.png" alt="EUREKA">
+    <img src="Screenshot_32-e1743765949780.png" alt="VIVA">
+    <img src="LOGO-DAWOOD-2.png" alt="DR DAWOOD">
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Follow Us</h2>
+  <div class="social-links">
+    <a href="https://www.instagram.com/dr_salma_alii" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@dr_salma_ali" target="_blank">TikTok</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 DR. Salma Ali All rights reserved.</p>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const modeToggle = document.getElementById('mode-toggle');
+    const body = document.body;
+
+    // ضبط إيموجي الزرار بشكل صحيح بناءً على الوضع الحالي المخزن عند التحميل
+    if (body.classList.contains('light-mode')) {
+      modeToggle.textContent = '🌞';
+    } else {
+      modeToggle.textContent = '🌙';
+    }
+
+    // تشغيل التبديل والحفظ الفوري بالاختيار الجديد
+    modeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      
+      if (body.classList.contains('light-mode')) {
+        modeToggle.textContent = '🌞';
+        localStorage.setItem("theme", "light");
+      } else {
+        modeToggle.textContent = '🌙';
+        localStorage.setItem("theme", "dark");
+      }
+    });
+  });
+</script>
+</body>
+</html>
